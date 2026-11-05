@@ -1354,4 +1354,68 @@ tripTimeAll.add(agent.actualTravelTime);]]></Code>
 		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
 		<QuantityColumn/>
 	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1793905381835</Id>
+		<Name><![CDATA[trafficIncident]]></Name>
+		<X>-210</X>
+		<Y>-170</Y>
+		<Label>
+			<X>-55</X>
+			<Y>-30</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>project_model</PackageName>
+			<ClassName>TrafficIncident</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>project_model</PackageName>
+				<ClassName>TrafficIncident</ClassName>
+				<ItemName>1793555545481</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[incidentStartTime]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[incidentDuration]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[capacityReduction]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[routeA_capacity]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[routeA_capacity]]></Code>
+				</Value>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InEnvironment>true</InEnvironment>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1793905381728</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
 </EmbeddedObjects>
