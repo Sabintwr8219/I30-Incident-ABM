@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Events>
+	<Event>
+		<Id>1793556016345</Id>
+		<Name><![CDATA[IncidentStart]]></Name>
+		<X>660</X>
+		<Y>-140</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties TriggerType="timeout" Mode="occuresOnce">
+			<Timeout Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">SECOND</Unit>
+			</Timeout>
+			<Rate Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="RateUnits">PER_SECOND</Unit>
+			</Rate>
+			<Id>1793556016343</Id>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1793606400000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[incidentStartTime]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">SECOND</Unit>
+			</RecurrenceCode>
+			<Condition>false</Condition>
+		</Properties>
+		<Action xmlns:al="http://anylogic.com"/>
+	</Event>
+	<Event>
+		<Id>1793556248487</Id>
+		<Name><![CDATA[IncidentClear]]></Name>
+		<X>660</X>
+		<Y>-110</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties TriggerType="timeout" Mode="occuresOnce">
+			<Timeout Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">SECOND</Unit>
+			</Timeout>
+			<Rate Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="RateUnits">PER_SECOND</Unit>
+			</Rate>
+			<Id>1793556248485</Id>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1793606400000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[incidentStartTime + incidentDuration]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">SECOND</Unit>
+			</RecurrenceCode>
+			<Condition>false</Condition>
+		</Properties>
+		<Action xmlns:al="http://anylogic.com"/>
+	</Event>
+</Events>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DynamicEvents>
+	<DynamicEventClass>
+		<Id>1793395136496</Id>
+		<Name><![CDATA[event]]></Name>
+		<X>90</X>
+		<Y>90</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+	</DynamicEventClass>
+</DynamicEvents>
