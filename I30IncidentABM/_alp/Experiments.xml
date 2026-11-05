@@ -38,7 +38,26 @@
 				<Alignment>LEFT</Alignment>
 			</Text>
 		</Presentation>
-		<Parameters/>
+		<Parameters>
+			<Parameter>
+				<ParameterName>routeA_normalTT</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>routeB_normalTT</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>routeA_capacity</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>routeB_capacity</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>trafficDemand</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>routeA_share</ParameterName>
+			</Parameter>
+		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
 			<ExecutionMode>realTimeScaled</ExecutionMode>
@@ -48,11 +67,11 @@
 			<RealTimeScale>1.0</RealTimeScale>
 		</PresentationProperties>
 		<ModelTimeProperties>
-			<StopOption>Never</StopOption>
+			<StopOption>Stop at specified time</StopOption>
 			<InitialDate>1793145600000</InitialDate>
 			<InitialTime>0.0</InitialTime>
-			<FinalDate>1795824000000</FinalDate>
-			<FinalTime>100.0</FinalTime>
+			<FinalDate>1793160000000</FinalDate>
+			<FinalTime>240.0</FinalTime>
 		</ModelTimeProperties>
 		<BypassInitialScreen>true</BypassInitialScreen>
 	</SimulationExperiment>
