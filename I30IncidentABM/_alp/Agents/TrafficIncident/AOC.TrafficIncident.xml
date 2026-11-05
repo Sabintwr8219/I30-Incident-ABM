@@ -32,6 +32,7 @@
 			<Code><![CDATA[10]]></Code>
 			<Unit Class="SpeedUnits">MPS</Unit>
 		</VelocityCode>
+		<MessageType>Object</MessageType>
 		<PhysicalLength Class="CodeUnitValue">
 			<Code><![CDATA[1]]></Code>
 			<Unit Class="LengthUnits">METER</Unit>
@@ -64,6 +65,12 @@
 		<ConnectionsRangeCode>50</ConnectionsRangeCode>
 		<NeighborLinkFractionCode>0.95</NeighborLinkFractionCode>
 		<MCode>10</MCode>
+		<LineStyle>SOLID</LineStyle>
+		<LineWidth>1</LineWidth>
+		<LineColor>-16777216</LineColor>
+		<LineZOrder>UNDER_AGENTS</LineZOrder>
+		<LineArrow>NONE</LineArrow>
+		<LineArrowPosition>END</LineArrowPosition>
 	</EnvironmentProperties>
 	<DatasetsCreationProperties>
 		<AutoCreate>true</AutoCreate>
@@ -97,7 +104,6 @@
 		<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
 	</ScaleRuler>
 	<CurrentLevel>1793555545482</CurrentLevel>
-	<ConnectionsId>1793555545477</ConnectionsId>
 	<Variables xmlns:al="http://anylogic.com"/>
 	<Events xmlns:al="http://anylogic.com"/>
 	<AgentLinks>
@@ -113,10 +119,8 @@
 			<PublicFlag>false</PublicFlag>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
-			<HandleReceiveInConnections>false</HandleReceiveInConnections>
 			<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
 			<AgentLinkBidirectional>true</AgentLinkBidirectional>
-			<MessageType>Object</MessageType>
 			<LineStyle>SOLID</LineStyle>
 			<LineWidth>1</LineWidth>
 			<LineColor>-16777216</LineColor>

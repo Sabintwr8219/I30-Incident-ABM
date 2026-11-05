@@ -2,9 +2,9 @@
 <EmbeddedObjects>
 	<EmbeddedObject>
 		<Id>1793497538856</Id>
-		<Name><![CDATA[testsource]]></Name>
-		<X>360</X>
-		<Y>-300</Y>
+		<Name><![CDATA[source]]></Name>
+		<X>380</X>
+		<Y>-870</Y>
 		<Label>
 			<X>-5</X>
 			<Y>-25</Y>
@@ -26,12 +26,13 @@
 		<Parameters>
 			<Parameter>
 				<Name><![CDATA[arrivalType]]></Name>
-				<Value Class="CodeValue">
-					<Code><![CDATA[self.INTERARRIVAL_TIME]]></Code>
-				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[rate]]></Name>
+				<Value Class="CodeUnitValue">
+					<Code><![CDATA[trafficDemand]]></Code>
+					<Unit Class="RateUnits">PER_HOUR</Unit>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[interarrivalTime]]></Name>
@@ -75,9 +76,6 @@
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[limitArrivals]]></Name>
-				<Value Class="CodeValue">
-					<Code><![CDATA[true]]></Code>
-				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[maxArrivals]]></Name>
@@ -129,9 +127,53 @@
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[speed]]></Name>
+				<Value Class="CodeUnitValue">
+					<Code><![CDATA[50]]></Code>
+					<Unit Class="SpeedUnits">MPH</Unit>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[newEntity]]></Name>
+				<Value Class="EntityCodeValue">
+					<IsAgentEntity>true</IsAgentEntity>
+					<EntityEmbeddedObject>
+						<Id>1793834400574</Id>
+						<ActiveObjectClass>
+							<PackageName>project_model</PackageName>
+							<ClassName>Driver</ClassName>
+						</ActiveObjectClass>
+						<GenericParameterSubstitute>
+							<GenericParameterSubstituteReference>
+								<PackageName>project_model</PackageName>
+								<ClassName>Driver</ClassName>
+								<ItemName>1793395814328</ItemName>
+							</GenericParameterSubstituteReference>
+						</GenericParameterSubstitute>
+						<Parameters/>
+						<ReplicationFlag>true</ReplicationFlag>
+						<Replication Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</Replication>
+						<CollectionType>ARRAY_LIST_BASED</CollectionType>
+						<InitialLocationType>XYZ</InitialLocationType>
+						<ColumnCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ColumnCode>
+						<RowCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</RowCode>
+						<LocationNameCode Class="CodeValue">
+							<Code><![CDATA[""]]></Code>
+						</LocationNameCode>
+						<InitializationType>LOAD_FROM_DATABASE</InitializationType>
+						<InitializationDatabaseTableQuery>
+							<Id>1793834400575</Id>
+							<TableReference/>
+						</InitializationDatabaseTableQuery>
+						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+						<QuantityColumn/>
+					</EntityEmbeddedObject>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[changeDimensions]]></Name>
@@ -201,9 +243,9 @@
 	</EmbeddedObject>
 	<EmbeddedObject>
 		<Id>1793497546813</Id>
-		<Name><![CDATA[testToDiversion]]></Name>
-		<X>500</X>
-		<Y>-310</Y>
+		<Name><![CDATA[moveToDiversion]]></Name>
+		<X>520</X>
+		<Y>-880</Y>
 		<Label>
 			<X>-15</X>
 			<Y>-15</Y>
@@ -310,8 +352,8 @@
 			<Parameter>
 				<Name><![CDATA[speed]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[20]]></Code>
-					<Unit Class="SpeedUnits">MPS</Unit>
+					<Code><![CDATA[40]]></Code>
+					<Unit Class="SpeedUnits">MPH</Unit>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -352,9 +394,9 @@
 	</EmbeddedObject>
 	<EmbeddedObject>
 		<Id>1793497562667</Id>
-		<Name><![CDATA[testToIncident]]></Name>
-		<X>600</X>
-		<Y>-310</Y>
+		<Name><![CDATA[moveToIncident]]></Name>
+		<X>840</X>
+		<Y>-880</Y>
 		<Label>
 			<X>-15</X>
 			<Y>-15</Y>
@@ -383,7 +425,7 @@
 			<Parameter>
 				<Name><![CDATA[destinationNode]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[ptFielderRandol]]></Code>
+					<Code><![CDATA[ptIncident]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -461,8 +503,8 @@
 			<Parameter>
 				<Name><![CDATA[speed]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[20]]></Code>
-					<Unit Class="SpeedUnits">MPS</Unit>
+					<Code><![CDATA[40]]></Code>
+					<Unit Class="SpeedUnits">MPH</Unit>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -503,9 +545,9 @@
 	</EmbeddedObject>
 	<EmbeddedObject>
 		<Id>1793497571028</Id>
-		<Name><![CDATA[testToRejoin]]></Name>
-		<X>770</X>
-		<Y>-310</Y>
+		<Name><![CDATA[moveToRejoin]]></Name>
+		<X>1660</X>
+		<Y>-880</Y>
 		<Label>
 			<X>-15</X>
 			<Y>-15</Y>
@@ -612,8 +654,8 @@
 			<Parameter>
 				<Name><![CDATA[speed]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[20]]></Code>
-					<Unit Class="SpeedUnits">MPS</Unit>
+					<Code><![CDATA[40]]></Code>
+					<Unit Class="SpeedUnits">MPH</Unit>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -654,9 +696,9 @@
 	</EmbeddedObject>
 	<EmbeddedObject>
 		<Id>1793497579672</Id>
-		<Name><![CDATA[testToDestination]]></Name>
-		<X>920</X>
-		<Y>-310</Y>
+		<Name><![CDATA[moveToDestination]]></Name>
+		<X>1810</X>
+		<Y>-880</Y>
 		<Label>
 			<X>-15</X>
 			<Y>-15</Y>
@@ -805,9 +847,9 @@
 	</EmbeddedObject>
 	<EmbeddedObject>
 		<Id>1793497586206</Id>
-		<Name><![CDATA[testSink]]></Name>
-		<X>1070</X>
-		<Y>-300</Y>
+		<Name><![CDATA[Sink]]></Name>
+		<X>2020</X>
+		<Y>-870</Y>
 		<Label>
 			<X>-10</X>
 			<Y>-20</Y>
@@ -829,6 +871,21 @@
 		<Parameters>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.exitTime = time();
+agent.actualTravelTime = agent.exitTime - agent.entryTime;
+agent.delay = agent.actualTravelTime - agent.normalTravelTime;
+agent.tripCompleted = true;
+completedTrips++;
+if (agent.currentRoute == 1) {
+    vehiclesOnRouteA--;
+    tripTimeA.add(agent.actualTravelTime);
+} else {
+    vehiclesOnRouteB--;
+    tripTimeB.add(agent.actualTravelTime);
+}
+tripTimeAll.add(agent.actualTravelTime);]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[destroyEntity]]></Name>
@@ -858,12 +915,301 @@
 		<QuantityColumn/>
 	</EmbeddedObject>
 	<EmbeddedObject>
-		<Id>1793497958122</Id>
-		<Name><![CDATA[moveTo]]></Name>
-		<X>700</X>
-		<Y>-310</Y>
+		<Id>1793832720031</Id>
+		<Name><![CDATA[drivers]]></Name>
+		<X>-70</X>
+		<Y>90</Y>
 		<Label>
-			<X>-15</X>
+			<X>-30</X>
+			<Y>-35</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<PresentationId>1793832724584</PresentationId>
+		<ActiveObjectClass>
+			<PackageName>project_model</PackageName>
+			<ClassName>Driver</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>project_model</PackageName>
+				<ClassName>Driver</ClassName>
+				<ItemName>1793395814328</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[assignedRoute]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[normalTravelTime]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>true</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InEnvironment>true</InEnvironment>
+		<InitialLocationType>NODE</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<NodeCode>ptOrigin</NodeCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>EMPTY</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1793832720029</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1793834459678</Id>
+		<Name><![CDATA[selectOutput]]></Name>
+		<X>710</X>
+		<Y>-870</Y>
+		<Label>
+			<X>-40</X>
+			<Y>-25</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>SelectOutput</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>SelectOutput</ClassName>
+				<ItemName>1412336242931</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[conditionIsProbabilistic]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[false]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[condition]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.assignedRoute == 1]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[probability]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.assignedRoute == 1]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onAtEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[choiceIsVolatile]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitTrue]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitFalse]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1793834459676</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1793834505591</Id>
+		<Name><![CDATA[moveToFielderRandol]]></Name>
+		<X>840</X>
+		<Y>-720</Y>
+		<Label>
+			<X>-20</X>
+			<Y>-15</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>MoveTo</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>MoveTo</ClassName>
+				<ItemName>1412336243157</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[mode]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationType]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationNode]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[ptFielderRandol]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationAttractor]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationResource]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationAgent]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationX]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationY]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationZ]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationLatitude]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationLongitude]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationGeoPlaceName]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationInNetwork]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationNetwork]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationLevel]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[useOffsets]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[offsetX]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[offsetY]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[offsetZ]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[straightMovement]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationUseRotation]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationRotation]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationVerticalRotation]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[movementType]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[tripTime]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[setSpeed]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[speed]]></Name>
+				<Value Class="CodeUnitValue">
+					<Code><![CDATA[40]]></Code>
+					<Unit Class="SpeedUnits">MPH</Unit>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[restoreSpeedOnArrival]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onRemove]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1793834505589</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1793834529143</Id>
+		<Name><![CDATA[moveToRandolCollins]]></Name>
+		<X>1120</X>
+		<Y>-720</Y>
+		<Label>
+			<X>-20</X>
 			<Y>-15</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
@@ -961,9 +1307,16 @@
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[setSpeed]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[speed]]></Name>
+				<Value Class="CodeUnitValue">
+					<Code><![CDATA[40]]></Code>
+					<Unit Class="SpeedUnits">MPH</Unit>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[restoreSpeedOnArrival]]></Name>
@@ -995,7 +1348,7 @@
 		</LocationNameCode>
 		<InitializationType>SPECIFIED_NUMBER</InitializationType>
 		<InitializationDatabaseTableQuery>
-			<Id>1793497958120</Id>
+			<Id>1793834529141</Id>
 			<TableReference/>
 		</InitializationDatabaseTableQuery>
 		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>

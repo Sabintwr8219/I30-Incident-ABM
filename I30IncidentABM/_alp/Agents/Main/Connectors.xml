@@ -3,8 +3,8 @@
 	<Connector>
 		<Id>1793497595666</Id>
 		<Name><![CDATA[connector]]></Name>
-		<X>390</X>
-		<Y>-290</Y>
+		<X>410</X>
+		<Y>-860</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -15,7 +15,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>project_model</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>testsource</ItemName>
+			<ItemName>source</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -25,7 +25,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>project_model</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>testToDiversion</ItemName>
+			<ItemName>moveToDiversion</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -44,53 +44,10 @@
 		</Points>
 	</Connector>
 	<Connector>
-		<Id>1793497599130</Id>
-		<Name><![CDATA[connector1]]></Name>
-		<X>540</X>
-		<Y>-290</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<SourceEmbeddedObjectReference>
-			<PackageName>project_model</PackageName>
-			<ClassName>Main</ClassName>
-			<ItemName>testToDiversion</ItemName>
-		</SourceEmbeddedObjectReference>
-		<SourceConnectableItemReference>
-			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-			<ClassName>MoveTo</ClassName>
-			<ItemName>out</ItemName>
-		</SourceConnectableItemReference>
-		<TargetEmbeddedObjectReference>
-			<PackageName>project_model</PackageName>
-			<ClassName>Main</ClassName>
-			<ItemName>testToIncident</ItemName>
-		</TargetEmbeddedObjectReference>
-		<TargetConnectableItemReference>
-			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-			<ClassName>MoveTo</ClassName>
-			<ItemName>in</ItemName>
-		</TargetConnectableItemReference>
-		<Points>
-			<Point>
-				<X>0</X>
-				<Y>0</Y>
-			</Point>
-			<Point>
-				<X>60</X>
-				<Y>0</Y>
-			</Point>
-		</Points>
-	</Connector>
-	<Connector>
 		<Id>1793497606510</Id>
 		<Name><![CDATA[connector3]]></Name>
-		<X>810</X>
-		<Y>-290</Y>
+		<X>1700</X>
+		<Y>-860</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -101,7 +58,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>project_model</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>testToRejoin</ItemName>
+			<ItemName>moveToRejoin</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -111,7 +68,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>project_model</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>testToDestination</ItemName>
+			<ItemName>moveToDestination</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -132,8 +89,8 @@
 	<Connector>
 		<Id>1793497610994</Id>
 		<Name><![CDATA[connector4]]></Name>
-		<X>960</X>
-		<Y>-290</Y>
+		<X>1850</X>
+		<Y>-860</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -144,7 +101,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>project_model</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>testToDestination</ItemName>
+			<ItemName>moveToDestination</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -154,7 +111,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>project_model</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>testSink</ItemName>
+			<ItemName>Sink</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -167,7 +124,7 @@
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>110</X>
+				<X>170</X>
 				<Y>0</Y>
 			</Point>
 		</Points>
@@ -175,8 +132,8 @@
 	<Connector>
 		<Id>1793497960904</Id>
 		<Name><![CDATA[connector2]]></Name>
-		<X>700</X>
-		<Y>-290</Y>
+		<X>1660</X>
+		<Y>-860</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -187,7 +144,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>project_model</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>moveTo</ItemName>
+			<ItemName>moveToRejoin</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -197,7 +154,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>project_model</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>testToIncident</ItemName>
+			<ItemName>moveToIncident</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -210,16 +167,16 @@
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>-60</X>
+				<X>-780</X>
 				<Y>0</Y>
 			</Point>
 		</Points>
 	</Connector>
 	<Connector>
-		<Id>1793497979471</Id>
-		<Name><![CDATA[connector5]]></Name>
-		<X>740</X>
-		<Y>-290</Y>
+		<Id>1793834463364</Id>
+		<Name><![CDATA[connector1]]></Name>
+		<X>0</X>
+		<Y>0</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -230,7 +187,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>project_model</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>moveTo</ItemName>
+			<ItemName>moveToDiversion</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -240,7 +197,93 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>project_model</PackageName>
 			<ClassName>Main</ClassName>
-			<ItemName>testToRejoin</ItemName>
+			<ItemName>selectOutput</ItemName>
+		</TargetEmbeddedObjectReference>
+		<TargetConnectableItemReference>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>SelectOutput</ClassName>
+			<ItemName>in</ItemName>
+		</TargetConnectableItemReference>
+		<Points>
+			<Point>
+				<X>560</X>
+				<Y>-860</Y>
+			</Point>
+			<Point>
+				<X>720</X>
+				<Y>-860</Y>
+			</Point>
+		</Points>
+	</Connector>
+	<Connector>
+		<Id>1793834463366</Id>
+		<Name><![CDATA[connector6]]></Name>
+		<X>0</X>
+		<Y>0</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<SourceEmbeddedObjectReference>
+			<PackageName>project_model</PackageName>
+			<ClassName>Main</ClassName>
+			<ItemName>selectOutput</ItemName>
+		</SourceEmbeddedObjectReference>
+		<SourceConnectableItemReference>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>SelectOutput</ClassName>
+			<ItemName>outT</ItemName>
+		</SourceConnectableItemReference>
+		<TargetEmbeddedObjectReference>
+			<PackageName>project_model</PackageName>
+			<ClassName>Main</ClassName>
+			<ItemName>moveToIncident</ItemName>
+		</TargetEmbeddedObjectReference>
+		<TargetConnectableItemReference>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>MoveTo</ClassName>
+			<ItemName>in</ItemName>
+		</TargetConnectableItemReference>
+		<Points>
+			<Point>
+				<X>740</X>
+				<Y>-860</Y>
+			</Point>
+			<Point>
+				<X>840</X>
+				<Y>-860</Y>
+			</Point>
+		</Points>
+	</Connector>
+	<Connector>
+		<Id>1793834626459</Id>
+		<Name><![CDATA[connector5]]></Name>
+		<X>1160</X>
+		<Y>-700</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<SourceEmbeddedObjectReference>
+			<PackageName>project_model</PackageName>
+			<ClassName>Main</ClassName>
+			<ItemName>moveToRandolCollins</ItemName>
+		</SourceEmbeddedObjectReference>
+		<SourceConnectableItemReference>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>MoveTo</ClassName>
+			<ItemName>out</ItemName>
+		</SourceConnectableItemReference>
+		<TargetEmbeddedObjectReference>
+			<PackageName>project_model</PackageName>
+			<ClassName>Main</ClassName>
+			<ItemName>moveToRejoin</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -253,7 +296,105 @@
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>30</X>
+				<X>230</X>
+				<Y>0</Y>
+			</Point>
+			<Point>
+				<X>230</X>
+				<Y>-160</Y>
+			</Point>
+			<Point>
+				<X>500</X>
+				<Y>-160</Y>
+			</Point>
+		</Points>
+	</Connector>
+	<Connector>
+		<Id>1793834678790</Id>
+		<Name><![CDATA[connector7]]></Name>
+		<X>730</X>
+		<Y>-850</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<SourceEmbeddedObjectReference>
+			<PackageName>project_model</PackageName>
+			<ClassName>Main</ClassName>
+			<ItemName>selectOutput</ItemName>
+		</SourceEmbeddedObjectReference>
+		<SourceConnectableItemReference>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>SelectOutput</ClassName>
+			<ItemName>outF</ItemName>
+		</SourceConnectableItemReference>
+		<TargetEmbeddedObjectReference>
+			<PackageName>project_model</PackageName>
+			<ClassName>Main</ClassName>
+			<ItemName>moveToFielderRandol</ItemName>
+		</TargetEmbeddedObjectReference>
+		<TargetConnectableItemReference>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>MoveTo</ClassName>
+			<ItemName>in</ItemName>
+		</TargetConnectableItemReference>
+		<Points>
+			<Point>
+				<X>0</X>
+				<Y>0</Y>
+			</Point>
+			<Point>
+				<X>0</X>
+				<Y>150</Y>
+			</Point>
+			<Point>
+				<X>110</X>
+				<Y>150</Y>
+			</Point>
+		</Points>
+	</Connector>
+	<Connector>
+		<Id>1793834768087</Id>
+		<Name><![CDATA[connector8]]></Name>
+		<X>880</X>
+		<Y>-700</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<SourceEmbeddedObjectReference>
+			<PackageName>project_model</PackageName>
+			<ClassName>Main</ClassName>
+			<ItemName>moveToFielderRandol</ItemName>
+		</SourceEmbeddedObjectReference>
+		<SourceConnectableItemReference>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>MoveTo</ClassName>
+			<ItemName>out</ItemName>
+		</SourceConnectableItemReference>
+		<TargetEmbeddedObjectReference>
+			<PackageName>project_model</PackageName>
+			<ClassName>Main</ClassName>
+			<ItemName>moveToRandolCollins</ItemName>
+		</TargetEmbeddedObjectReference>
+		<TargetConnectableItemReference>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>MoveTo</ClassName>
+			<ItemName>in</ItemName>
+		</TargetConnectableItemReference>
+		<Points>
+			<Point>
+				<X>0</X>
+				<Y>0</Y>
+			</Point>
+			<Point>
+				<X>240</X>
 				<Y>0</Y>
 			</Point>
 		</Points>
