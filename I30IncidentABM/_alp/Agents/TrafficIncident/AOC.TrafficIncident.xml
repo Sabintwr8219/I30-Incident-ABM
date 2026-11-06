@@ -106,6 +106,7 @@
 	<CurrentLevel>1793555545482</CurrentLevel>
 	<Variables xmlns:al="http://anylogic.com"/>
 	<Events xmlns:al="http://anylogic.com"/>
+	<Functions xmlns:al="http://anylogic.com"/>
 	<AgentLinks>
 		<AgentLink>
 			<Id>1793555545477</Id>

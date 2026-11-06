@@ -123,6 +123,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[600]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1793832088758</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
