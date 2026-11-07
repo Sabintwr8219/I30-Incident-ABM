@@ -57,6 +57,15 @@
 			<Parameter>
 				<ParameterName>routeA_share</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>routeB_demand</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>routeA_lanes</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>routeB_lanes</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>

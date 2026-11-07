@@ -128,7 +128,7 @@
 			<Parameter>
 				<Name><![CDATA[speed]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[50]]></Code>
+					<Code><![CDATA[agent.routeA_speed]]></Code>
 					<Unit Class="SpeedUnits">MPH</Unit>
 				</Value>
 			</Parameter>
@@ -217,6 +217,10 @@
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onAtExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.vehicleId = nextVehicleId++;
+agent.entryTime = time();]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
@@ -359,7 +363,7 @@
 			<Parameter>
 				<Name><![CDATA[speed]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[40]]></Code>
+					<Code><![CDATA[agent.routeA_speed]]></Code>
 					<Unit Class="SpeedUnits">MPH</Unit>
 				</Value>
 			</Parameter>
@@ -371,6 +375,9 @@
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.diversionTime = time();]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onRemove]]></Name>
@@ -510,7 +517,7 @@
 			<Parameter>
 				<Name><![CDATA[speed]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[40]]></Code>
+					<Code><![CDATA[agent.routeA_speed]]></Code>
 					<Unit Class="SpeedUnits">MPH</Unit>
 				</Value>
 			</Parameter>
@@ -519,6 +526,9 @@
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.exportRoute = "A";]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
@@ -661,7 +671,9 @@
 			<Parameter>
 				<Name><![CDATA[speed]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[40]]></Code>
+					<Code><![CDATA[agent.exportRoute.equals("A")
+    ? agent.routeA_speed
+    : agent.routeB_speed]]></Code>
 					<Unit Class="SpeedUnits">MPH</Unit>
 				</Value>
 			</Parameter>
@@ -673,6 +685,9 @@
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.rejoinTime = time();]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onRemove]]></Name>
@@ -812,8 +827,8 @@
 			<Parameter>
 				<Name><![CDATA[speed]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[20]]></Code>
-					<Unit Class="SpeedUnits">MPS</Unit>
+					<Code><![CDATA[agent.routeA_speed]]></Code>
+					<Unit Class="SpeedUnits">MPH</Unit>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -891,7 +906,9 @@ if (agent.currentRoute == 1) {
     vehiclesOnRouteB--;
     tripTimeB.add(agent.actualTravelTime);
 }
-tripTimeAll.add(agent.actualTravelTime);]]></Code>
+tripTimeAll.add(agent.actualTravelTime);
+
+exportVehicle(agent);]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -951,6 +968,12 @@ tripTimeAll.add(agent.actualTravelTime);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[normalTravelTime]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[routeA_speed]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[routeB_speed]]></Name>
 			</Parameter>
 		</Parameters>
 		<ReplicationFlag>true</ReplicationFlag>
@@ -1170,7 +1193,7 @@ tripTimeAll.add(agent.actualTravelTime);]]></Code>
 			<Parameter>
 				<Name><![CDATA[speed]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[40]]></Code>
+					<Code><![CDATA[agent.routeB_speed]]></Code>
 					<Unit Class="SpeedUnits">MPH</Unit>
 				</Value>
 			</Parameter>
@@ -1179,6 +1202,9 @@ tripTimeAll.add(agent.actualTravelTime);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.exportRoute = "B";]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
@@ -1321,7 +1347,7 @@ tripTimeAll.add(agent.actualTravelTime);]]></Code>
 			<Parameter>
 				<Name><![CDATA[speed]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[40]]></Code>
+					<Code><![CDATA[agent.routeB_speed]]></Code>
 					<Unit Class="SpeedUnits">MPH</Unit>
 				</Value>
 			</Parameter>

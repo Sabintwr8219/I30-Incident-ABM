@@ -2,6 +2,36 @@
 <ActiveObjectClass>
 	<Id>1793216361329</Id>
 	<Name><![CDATA[Main]]></Name>
+	<StartupCode><![CDATA[String[] headers = {
+    "run_id",
+    "veh_id",
+    "route",
+    "departure_time_min",
+    "arrival_time_min",
+    "diversion_time_min",
+    "rejoin_time_min",
+    "distance_travelled_m",
+    "diversion_rejoin_distance_m"
+};
+
+for (int c = 0; c < headers.length; c++) {
+    excelResults.setCellValue(headers[c], "Vehicles", 1, c + 1);
+}
+
+// Append below previous results.
+int lastRow = excelResults.getLastRowNum("Vehicles");
+excelRow = Math.max(2, lastRow + 1);
+
+// Assign the next run ID.
+if (lastRow >= 2) {
+    runId = (int) excelResults.getCellNumericValue(
+        "Vehicles", lastRow, 1
+    ) + 1;
+} else {
+    runId = 1;
+}
+
+nextVehicleId = 1;]]></StartupCode>
 	<Generic>false</Generic>
 	<GenericParameter>
 		<Id>1793216361334</Id>
@@ -105,6 +135,7 @@
 	</ScaleRuler>
 	<CurrentLevel>1793216361335</CurrentLevel>
 	<Variables xmlns:al="http://anylogic.com"/>
+	<Functions xmlns:al="http://anylogic.com"/>
 	<AnalysisData>
 		<Statistics>
 			<Id>1793835383841</Id>
@@ -191,6 +222,28 @@
 			<Discrete>true</Discrete>
 		</Statistics>
 	</AnalysisData>
+	<Connectivity>
+		<ExcelFile>
+			<Id>1794016324004</Id>
+			<Name><![CDATA[excelResults]]></Name>
+			<X>-960</X>
+			<Y>440</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<ResourceReference>
+				<PackageName>project_model</PackageName>
+				<ClassName>New Microsoft Excel Worksheet.xlsx</ClassName>
+			</ResourceReference>
+			<SaveInSnapshot>false</SaveInSnapshot>
+			<LoadOnStartup>true</LoadOnStartup>
+			<SaveOnDispose>true</SaveOnDispose>
+		</ExcelFile>
+	</Connectivity>
 	<EmbeddedObjects xmlns:al="http://anylogic.com"/>
 	<Presentation>
 		<Level>
