@@ -97,7 +97,8 @@
 			<OccurrenceAtTime>true</OccurrenceAtTime>
 			<OccurrenceDate>1794038400000</OccurrenceDate>
 			<OccurrenceTime Class="CodeUnitValue">
-				<Code><![CDATA[incidentStartTime + informationDelay]]></Code>
+				<Code><![CDATA[
+incidentStartTime + informationDelay]]></Code>
 				<Unit Class="TimeUnits">MINUTE</Unit>
 			</OccurrenceTime>
 			<RecurrenceCode Class="CodeUnitValue">

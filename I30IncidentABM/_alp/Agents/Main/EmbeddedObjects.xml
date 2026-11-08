@@ -1448,9 +1448,6 @@ exportVehicle(agent);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[alertEnabled]]></Name>
-				<Value Class="CodeValue">
-					<Code><![CDATA[true]]></Code>
-				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[recoveryThreshold]]></Name>

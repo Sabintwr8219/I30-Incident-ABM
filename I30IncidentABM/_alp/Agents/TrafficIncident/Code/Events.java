@@ -23,27 +23,28 @@ get_Main().updateIncidentMarker();
 
 void IncidentClear()
 {/*ALCODESTART::1793556248487*/
-// Deactivate the incident
+
+//// INCIDENT CLEARANCE
+
+// End the incident
 incidentActive = false;
 
-// Stop incident information
+// Turn off incident information
 informationAvailable = false;
 
 // Restore normal Route A capacity
 routeA_currentCapacity = routeA_capacity;
 
-// Record incident clearance time in minutes
+// Record incident clearance time
 incidentClearTime = time(MINUTE);
 
-// Display results
+// Display incident clearance information
 traceln("=== INCIDENT CLEARED ===");
 traceln("Clearance time: " + incidentClearTime + " minutes");
 traceln("Incident active: " + incidentActive);
 traceln("Information available: " + informationAvailable);
 traceln("Route A capacity: " + routeA_currentCapacity + " veh/hr");
 
-// Update the marker on the map
-get_Main().updateIncidentMarker();
 
 /*ALCODEEND*/}
 
