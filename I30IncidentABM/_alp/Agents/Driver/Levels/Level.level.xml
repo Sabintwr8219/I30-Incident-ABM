@@ -6,7 +6,7 @@
 		<X>0</X>
 		<Y>0</Y>
 		<Label>
-			<X>10</X>
+			<X>6.383</X>
 			<Y>0</Y>
 		</Label>
 		<PublicFlag>true</PublicFlag>
@@ -20,8 +20,8 @@
 			<Rectangle>
 				<Id>1793833244092</Id>
 				<Name><![CDATA[_ps86]]></Name>
-				<X>13</X>
-				<Y>-8</Y>
+				<X>8.298</X>
+				<Y>-4.867</Y>
 				<Label>
 					<X>10</X>
 					<Y>10</Y>
@@ -37,8 +37,8 @@
 				<LineColor/>
 				<LineMaterial>null</LineMaterial>
 				<LineStyle>SOLID</LineStyle>
-				<Width>2</Width>
-				<Height>17</Height>
+				<Width>1.277</Width>
+				<Height>10.343</Height>
 				<Rotation>0.0</Rotation>
 				<FillColor>-12566464</FillColor>
 				<FillMaterial>null</FillMaterial>
@@ -46,8 +46,8 @@
 			<Curve ControlPoints="true">
 				<Id>1793833244094</Id>
 				<Name><![CDATA[_ps87]]></Name>
-				<X>26</X>
-				<Y>-9</Y>
+				<X>16.595</X>
+				<Y>-5.476</Y>
 				<Label>
 					<X>-20</X>
 					<Y>40</Y>
@@ -76,28 +76,28 @@
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>1</X>
-						<Y>2</Y>
+						<X>0.638</X>
+						<Y>1.217</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
 						<X>0</X>
-						<Y>3</Y>
+						<Y>1.825</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>-1</X>
-						<Y>1</Y>
+						<X>-0.638</X>
+						<Y>0.608</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>-2</X>
-						<Y>-1</Y>
+						<X>-1.277</X>
+						<Y>-0.608</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>-1</X>
-						<Y>-2</Y>
+						<X>-0.638</X>
+						<Y>-1.217</Y>
 						<Z>0</Z>
 					</Point>
 				</Points>
@@ -106,8 +106,8 @@
 			<Curve ControlPoints="true">
 				<Id>1793833244096</Id>
 				<Name><![CDATA[_ps88]]></Name>
-				<X>26</X>
-				<Y>10</Y>
+				<X>16.595</X>
+				<Y>6.084</Y>
 				<Label>
 					<X>-20</X>
 					<Y>40</Y>
@@ -136,28 +136,28 @@
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>-1</X>
-						<Y>2</Y>
+						<X>-0.638</X>
+						<Y>1.217</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>-2</X>
-						<Y>1</Y>
+						<X>-1.277</X>
+						<Y>0.608</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>-1</X>
-						<Y>-1</Y>
+						<X>-0.638</X>
+						<Y>-0.608</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
 						<X>0</X>
-						<Y>-3</Y>
+						<Y>-1.825</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>1</X>
-						<Y>-2</Y>
+						<X>0.638</X>
+						<Y>-1.217</Y>
 						<Z>0</Z>
 					</Point>
 				</Points>
@@ -166,8 +166,8 @@
 			<Curve ControlPoints="true">
 				<Id>1793833244098</Id>
 				<Name><![CDATA[_ps89]]></Name>
-				<X>15</X>
-				<Y>-8</Y>
+				<X>9.574</X>
+				<Y>-4.867</Y>
 				<Label>
 					<X>-20</X>
 					<Y>40</Y>
@@ -202,76 +202,76 @@
 					</Point>
 					<Point>
 						<X>0</X>
-						<Y>17</Y>
+						<Y>10.343</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
 						<X>0</X>
-						<Y>17</Y>
+						<Y>10.343</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
 						<X>0</X>
-						<Y>17</Y>
+						<Y>10.343</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>10</X>
-						<Y>17</Y>
+						<X>6.383</X>
+						<Y>10.343</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>10</X>
-						<Y>17</Y>
+						<X>6.383</X>
+						<Y>10.343</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>10</X>
-						<Y>17</Y>
+						<X>6.383</X>
+						<Y>10.343</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>12</X>
-						<Y>17</Y>
+						<X>7.659</X>
+						<Y>10.343</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>13</X>
-						<Y>16</Y>
+						<X>8.298</X>
+						<Y>9.735</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>15</X>
-						<Y>14</Y>
+						<X>9.574</X>
+						<Y>8.518</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>15</X>
-						<Y>3</Y>
+						<X>9.574</X>
+						<Y>1.825</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>13</X>
-						<Y>1</Y>
+						<X>8.298</X>
+						<Y>0.608</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>12</X>
+						<X>7.659</X>
 						<Y>0</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>10</X>
+						<X>6.383</X>
 						<Y>0</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>10</X>
+						<X>6.383</X>
 						<Y>0</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>10</X>
+						<X>6.383</X>
 						<Y>0</Y>
 						<Z>0</Z>
 					</Point>
@@ -286,8 +286,8 @@
 			<RoundedRectangle>
 				<Id>1793833244100</Id>
 				<Name><![CDATA[_ps90]]></Name>
-				<X>16</X>
-				<Y>-6</Y>
+				<X>10.213</X>
+				<Y>-3.651</Y>
 				<Label>
 					<X>10</X>
 					<Y>10</Y>
@@ -303,8 +303,8 @@
 				<LineColor/>
 				<LineMaterial>null</LineMaterial>
 				<LineStyle>SOLID</LineStyle>
-				<Width>9</Width>
-				<Height>13</Height>
+				<Width>5.745</Width>
+				<Height>7.909</Height>
 				<Rotation>0.0</Rotation>
 				<FillColor>-9066808</FillColor>
 				<FillMaterial>null</FillMaterial>
@@ -313,8 +313,8 @@
 			<Rectangle>
 				<Id>1793833244102</Id>
 				<Name><![CDATA[_ps91]]></Name>
-				<X>-29</X>
-				<Y>-8</Y>
+				<X>-18.51</X>
+				<Y>-4.867</Y>
 				<Label>
 					<X>10</X>
 					<Y>10</Y>
@@ -330,8 +330,8 @@
 				<LineColor/>
 				<LineMaterial>null</LineMaterial>
 				<LineStyle>SOLID</LineStyle>
-				<Width>2</Width>
-				<Height>17</Height>
+				<Width>1.277</Width>
+				<Height>10.343</Height>
 				<Rotation>0.0</Rotation>
 				<FillColor>-12566464</FillColor>
 				<FillMaterial>null</FillMaterial>
@@ -339,8 +339,8 @@
 			<Rectangle>
 				<Id>1793833244104</Id>
 				<Name><![CDATA[_ps92]]></Name>
-				<X>-27</X>
-				<Y>-9</Y>
+				<X>-17.234</X>
+				<Y>-5.476</Y>
 				<Label>
 					<X>10</X>
 					<Y>10</Y>
@@ -356,8 +356,8 @@
 				<LineColor>-16777216</LineColor>
 				<LineMaterial>null</LineMaterial>
 				<LineStyle>SOLID</LineStyle>
-				<Width>41</Width>
-				<Height>19</Height>
+				<Width>26.17</Width>
+				<Height>11.56</Height>
 				<Rotation>0.0</Rotation>
 				<FillColor>-4144960</FillColor>
 				<FillMaterial>null</FillMaterial>
@@ -365,8 +365,8 @@
 			<RoundedRectangle>
 				<Id>1793833244106</Id>
 				<Name><![CDATA[_ps93]]></Name>
-				<X>-26</X>
-				<Y>-7</Y>
+				<X>-16.595</X>
+				<Y>-4.259</Y>
 				<Label>
 					<X>10</X>
 					<Y>10</Y>
@@ -382,8 +382,8 @@
 				<LineColor/>
 				<LineMaterial>null</LineMaterial>
 				<LineStyle>SOLID</LineStyle>
-				<Width>39</Width>
-				<Height>15</Height>
+				<Width>24.893</Width>
+				<Height>9.126</Height>
 				<Rotation>0.0</Rotation>
 				<FillColor>-1</FillColor>
 				<FillMaterial>null</FillMaterial>
@@ -392,8 +392,8 @@
 			<Curve ControlPoints="true">
 				<Id>1793833244108</Id>
 				<Name><![CDATA[_ps94]]></Name>
-				<X>25</X>
-				<Y>8</Y>
+				<X>15.957</X>
+				<Y>4.867</Y>
 				<Label>
 					<X>-20</X>
 					<Y>40</Y>
@@ -427,78 +427,78 @@
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>1</X>
+						<X>0.638</X>
 						<Y>0</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>2</X>
-						<Y>-2</Y>
+						<X>1.277</X>
+						<Y>-1.217</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>2</X>
-						<Y>-2</Y>
+						<X>1.277</X>
+						<Y>-1.217</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>3</X>
-						<Y>-3</Y>
+						<X>1.915</X>
+						<Y>-1.825</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>3</X>
-						<Y>-7</Y>
+						<X>1.915</X>
+						<Y>-4.259</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>3</X>
-						<Y>-11</Y>
+						<X>1.915</X>
+						<Y>-6.693</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>2</X>
-						<Y>-13</Y>
+						<X>1.277</X>
+						<Y>-7.909</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>2</X>
-						<Y>-13</Y>
+						<X>1.277</X>
+						<Y>-7.909</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>1</X>
-						<Y>-15</Y>
-						<Z>0</Z>
-					</Point>
-					<Point>
-						<X>0</X>
-						<Y>-15</Y>
+						<X>0.638</X>
+						<Y>-9.126</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
 						<X>0</X>
-						<Y>-15</Y>
+						<Y>-9.126</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
 						<X>0</X>
-						<Y>-15</Y>
+						<Y>-9.126</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>1</X>
-						<Y>-11</Y>
+						<X>0</X>
+						<Y>-9.126</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>1</X>
-						<Y>-7</Y>
+						<X>0.638</X>
+						<Y>-6.693</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>
-						<X>1</X>
-						<Y>-3</Y>
+						<X>0.638</X>
+						<Y>-4.259</Y>
+						<Z>0</Z>
+					</Point>
+					<Point>
+						<X>0.638</X>
+						<Y>-1.825</Y>
 						<Z>0</Z>
 					</Point>
 					<Point>

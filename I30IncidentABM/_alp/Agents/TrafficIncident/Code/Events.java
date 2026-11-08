@@ -1,8 +1,5 @@
 void IncidentStart()
 {/*ALCODESTART::1793556016345*/
-
-/* INCIDENT START */
-
 // Activate the incident
 incidentActive = true;
 
@@ -19,13 +16,13 @@ traceln("Route A capacity: " + routeA_currentCapacity + " veh/hr");
 traceln("Discharge interval: "
     + getDischargeInterval() + " minutes");
 
+// Update the marker on the map
+get_Main().updateIncidentMarker();
+
 /*ALCODEEND*/}
 
 void IncidentClear()
 {/*ALCODESTART::1793556248487*/
-
-/* INCIDENT CLEARANCE */
-
 // Deactivate the incident
 incidentActive = false;
 
@@ -44,6 +41,9 @@ traceln("Clearance time: " + incidentClearTime + " minutes");
 traceln("Incident active: " + incidentActive);
 traceln("Information available: " + informationAvailable);
 traceln("Route A capacity: " + routeA_currentCapacity + " veh/hr");
+
+// Update the marker on the map
+get_Main().updateIncidentMarker();
 
 /*ALCODEEND*/}
 
@@ -65,5 +65,11 @@ if (incidentActive && alertEnabled) {
     traceln("No incident information released.");
 }
 
+/*ALCODEEND*/}
+
+void RunSummary()
+{/*ALCODESTART::1794300000018*/
+// write the scenario summary //
+get_Main().writeScenarioSummary();
 /*ALCODEEND*/}
 

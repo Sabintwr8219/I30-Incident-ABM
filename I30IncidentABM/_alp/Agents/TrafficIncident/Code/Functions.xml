@@ -5,56 +5,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1793990015869</Id>
 		<Name><![CDATA[getDischargeInterval]]></Name>
-		<X>850</X>
-		<Y>-140</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Body xmlns:al="http://anylogic.com"/>
-	</Function>
-	<Function AccessType="default" StaticFunction="false">
-		<ReturnModificator>VOID</ReturnModificator>
-		<ReturnType>double</ReturnType>
-		<Id>1793990299328</Id>
-		<Name><![CDATA[joinIncidentQueue]]></Name>
-		<X>850</X>
-		<Y>-110</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Body xmlns:al="http://anylogic.com"/>
-	</Function>
-	<Function AccessType="default" StaticFunction="false">
-		<ReturnModificator>VOID</ReturnModificator>
-		<ReturnType>double</ReturnType>
-		<Id>1793990635045</Id>
-		<Name><![CDATA[leaveIncidentQueue]]></Name>
-		<X>850</X>
-		<Y>-80</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Body xmlns:al="http://anylogic.com"/>
-	</Function>
-	<Function AccessType="default" StaticFunction="false">
-		<ReturnModificator>RETURNS_VALUE</ReturnModificator>
-		<ReturnType>double</ReturnType>
-		<Id>1793990841957</Id>
-		<Name><![CDATA[getIncidentWaitTime]]></Name>
-		<X>850</X>
-		<Y>-50</Y>
+		<X>760</X>
+		<Y>20</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -69,8 +21,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1793991453421</Id>
 		<Name><![CDATA[checkNetworkRecovery]]></Name>
-		<X>850</X>
-		<Y>-20</Y>
+		<X>760</X>
+		<Y>50</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -89,12 +41,28 @@
 		<Body xmlns:al="http://anylogic.com"/>
 	</Function>
 	<Function AccessType="default" StaticFunction="false">
+		<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+		<ReturnType>double</ReturnType>
+		<Id>1794300000016</Id>
+		<Name><![CDATA[getNormalNetworkTT]]></Name>
+		<X>760</X>
+		<Y>80</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Body xmlns:al="http://anylogic.com"/>
+	</Function>
+	<Function AccessType="default" StaticFunction="false">
 		<ReturnModificator>VOID</ReturnModificator>
 		<ReturnType>double</ReturnType>
-		<Id>1793991608774</Id>
-		<Name><![CDATA[recordIncidentWaitingTime]]></Name>
-		<X>850</X>
-		<Y>10</Y>
+		<Id>1794300000017</Id>
+		<Name><![CDATA[trackTripForRecovery]]></Name>
+		<X>760</X>
+		<Y>110</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -103,25 +71,9 @@
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
 		<Parameter>
-			<Name><![CDATA[waitingTime]]></Name>
+			<Name><![CDATA[tripTime]]></Name>
 			<Type><![CDATA[double]]></Type>
 		</Parameter>
-		<Body xmlns:al="http://anylogic.com"/>
-	</Function>
-	<Function AccessType="default" StaticFunction="false">
-		<ReturnModificator>RETURNS_VALUE</ReturnModificator>
-		<ReturnType>double</ReturnType>
-		<Id>1793991947016</Id>
-		<Name><![CDATA[getAverageIncidentWaitingTime]]></Name>
-		<X>850</X>
-		<Y>40</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
 		<Body xmlns:al="http://anylogic.com"/>
 	</Function>
 </Functions>

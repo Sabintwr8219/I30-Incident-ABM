@@ -156,6 +156,12 @@
 							<Parameter>
 								<Name><![CDATA[normalTravelTime]]></Name>
 							</Parameter>
+							<Parameter>
+								<Name><![CDATA[routeA_speed]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[routeB_speed]]></Name>
+							</Parameter>
 						</Parameters>
 						<ReplicationFlag>true</ReplicationFlag>
 						<Replication Class="CodeValue">
@@ -908,6 +914,17 @@ if (agent.currentRoute == 1) {
 }
 tripTimeAll.add(agent.actualTravelTime);
 
+// Baseline metrics
+delayAll.add(agent.delay);
+totalSystemTravelTime += agent.actualTravelTime;
+trafficIncident.trackTripForRecovery(agent.actualTravelTime);
+
+// Time series for the plots
+winDelaySum += agent.delay;
+winTTSum += agent.actualTravelTime;
+winDoneN++;
+sampleTimeSeries();
+
 exportVehicle(agent);]]></Code>
 				</Value>
 			</Parameter>
@@ -1492,6 +1509,9 @@ exportVehicle(agent);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[maximumCapacity]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[entityLocation]]></Name>
@@ -1522,12 +1542,24 @@ exportVehicle(agent);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.incidentEnterTime = time();
+currentQueueLength++;
+if (currentQueueLength > maxQueueLength) {
+    maxQueueLength = currentQueueLength;
+}
+updateIncidentMarker();]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onAtExit]]></Name>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[currentQueueLength--;
+updateIncidentMarker();]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExitTimeout]]></Name>
@@ -1598,9 +1630,15 @@ exportVehicle(agent);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[capacity]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[maximumCapacity]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[false]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[entityLocation]]></Name>
@@ -1622,6 +1660,12 @@ exportVehicle(agent);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[incidentWait.add(time() - agent.incidentEnterTime);
+winWaitSum += time() - agent.incidentEnterTime;
+winWaitN++;
+sampleTimeSeries();]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onRemove]]></Name>

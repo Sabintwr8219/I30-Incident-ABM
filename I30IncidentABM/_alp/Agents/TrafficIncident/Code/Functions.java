@@ -3,68 +3,8 @@ double getDischargeInterval()
 return 60.0 / routeA_currentCapacity;
 /*ALCODEEND*/}
 
-double joinIncidentQueue()
-{/*ALCODESTART::1793990299328*/
-
-/* VEHICLE JOINS INCIDENT QUEUE */
-
-queueLengthRouteA = queueLengthRouteA + 1;
-
-if (queueLengthRouteA > maxQueueLengthRouteA) {
-
-    maxQueueLengthRouteA = queueLengthRouteA;
-
-}
-
-/*ALCODEEND*/}
-
-double leaveIncidentQueue()
-{/*ALCODESTART::1793990635045*/
-
-/* VEHICLE LEAVES INCIDENT QUEUE */
-
-// Reduce current queue length
-if (queueLengthRouteA > 0) {
-
-    queueLengthRouteA = queueLengthRouteA - 1;
-
-}
-
-/*ALCODEEND*/}
-
-double getIncidentWaitTime()
-{/*ALCODESTART::1793990841957*/
-
-/* CALCULATE INCIDENT WAITING TIME */
-
-// Current simulation time in minutes
-double currentTime = time(MINUTE);
-
-// Calculate discharge interval
-double dischargeInterval = getDischargeInterval();
-
-// Determine next available release time
-double releaseTime = currentTime;
-
-if (nextRouteAReleaseTime > currentTime) {
-    releaseTime = nextRouteAReleaseTime;
-}
-
-// Calculate waiting time
-double waitingTime = releaseTime - currentTime;
-
-// Reserve next release time
-nextRouteAReleaseTime = releaseTime + dischargeInterval;
-
-// Return waiting time in minutes
-return waitingTime;
-
-/*ALCODEEND*/}
-
 double checkNetworkRecovery(double currentNetworkTT,double normalNetworkTT)
 {/*ALCODESTART::1793991453421*/
-
-/* CHECK NETWORK RECOVERY */
 
 // Check if the incident has cleared
 if (!incidentActive &&
@@ -93,51 +33,40 @@ if (!incidentActive &&
 
 /*ALCODEEND*/}
 
-double recordIncidentWaitingTime(double waitingTime)
-{/*ALCODESTART::1793991608774*/
-
-/* RECORD INCIDENT WAITING TIME */
-
-// Check that waiting time is valid
-if (waitingTime >= 0) {
-
-    // Update total waiting time
-    totalIncidentWaitingTime =
-        totalIncidentWaitingTime + waitingTime;
-
-    // Count vehicles with positive waiting time
-    if (waitingTime > 0) {
-
-        numberDelayedAtIncident =
-            numberDelayedAtIncident + 1;
-
-    }
-
-    // Update maximum incident waiting time
-    if (waitingTime > maxIncidentWaitingTime) {
-
-        maxIncidentWaitingTime = waitingTime;
-
-    }
-}
-
+double getNormalNetworkTT()
+{/*ALCODESTART::1794300000016*/
+//Average trip time of the vehicles that finished in the window just before the incident. //
+return normalTTCount > 0 ? normalTTSum / normalTTCount : -1;
 /*ALCODEEND*/}
 
-double getAverageIncidentWaitingTime()
-{/*ALCODESTART::1793991947016*/
+double trackTripForRecovery(double tripTime)
+{/*ALCODESTART::1794300000017*/
+//Called from the Sink every time a vehicle finishes its trip. */
 
-/* CALCULATE AVERAGE INCIDENT WAITING TIME */
+double now = time(MINUTE);
 
-if (numberDelayedAtIncident > 0) {
-
-    return totalIncidentWaitingTime /
-           numberDelayedAtIncident;
-
-} else {
-
-    return 0;
-
+// 1. Learn the pre-incident benchmark (normal network travel time)
+if (now >= incidentStartTime - preIncidentWindow && now < incidentStartTime) {
+    normalTTSum = normalTTSum + tripTime;
+    normalTTCount = normalTTCount + 1;
 }
 
+// 2. Collect trips finished in the current window
+windowTTSum = windowTTSum + tripTime;
+windowTTCount = windowTTCount + 1;
+
+// 3. At the end of each window, compare with the benchmark
+if (now >= nextRecoveryCheck) {
+
+    currentNetworkTT = windowTTSum / windowTTCount;
+
+    if (incidentClearTime >= 0) {
+        checkNetworkRecovery(currentNetworkTT, getNormalNetworkTT());
+    }
+
+    windowTTSum = 0;
+    windowTTCount = 0;
+    nextRecoveryCheck = now + recoveryCheckInterval;
+}
 /*ALCODEEND*/}
 
